@@ -44,6 +44,7 @@ To run the website locally, follow these steps:
 - CSS3
 - JavaScript
 - Bootstrap (for responsive design)
+- jQuery
 
 ## License
 
