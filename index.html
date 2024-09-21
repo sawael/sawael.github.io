@@ -332,13 +332,13 @@
               />
             </div>
             <div class="grid-item">
-              <img
+              <img  
                 src="img/photo-1593081727402-2426ff8d3-h_m12j0903.jpg"
                 alt=""
               />
             </div>
             <div class="grid-item">
-              <img
+              <img      
                 src="img/photo-1593081727402-2426ff8d3-h_m12ja0wc.jpg"
                 alt=""
               />
@@ -362,7 +362,7 @@
               />
             </div>
             <div class="grid-item">
-              <img
+                <img
                 src="img/photo-1593081727402-2426ff8d3-h_m12ja0wc.jpg"
                 alt=""
               />
@@ -490,7 +490,55 @@
         </div>
       </div>
     </section>
-
+    <br>
+    <br>
+    <br>
+    <section
+    data-bs-version="5.1"
+    class="projects-sae"
+    id="projects-section"
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-5 content-head text-center">
+          <h3 class="sae-section-title sae-fonts-style display-2">
+            <strong>My Project Gallery</strong>
+          </h3>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 text-center">
+          <img src="img/cpp_project.jpg" alt="C++ Project" class="img-fluid mb-3 shadow-img" />
+          <br>
+          <h5 class="card-title sae-fonts-style">C++ Online Food Ordering System</h5>
+          <a href="https://github.com/sawael/oop_food_cpp" class="btn btn-primary display-7 mb-3" target="_blank">View Project</a>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <img src="img/page_1.jpg" alt="One Plains Branding" class="img-fluid mb-3 shadow-img" />
+          <br>
+          <h5 class="card-title sae-fonts-style">One Plains Branding</h5>
+          <a href="files/Brand_guidelines_one_plains.pdf" class="btn btn-primary display-7 mb-3" target="_blank">View More</a>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <img src="img/webpage_1.jpg" alt="Landing page template" class="img-fluid mb-3 shadow-img" />
+          <br>
+          <h5 class="card-title sae-fonts-style">CLARA Landing Page Template</h5>
+          <a href="https://sawael.github.io/landing/" class="btn btn-primary display-7 mb-3">View Demo</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
     <section
       data-bs-version="5.1"
       class="features023 sam-uonhXqzvHU"
@@ -882,5 +930,38 @@
       <button id="accept-cookies" class="btn btn-primary">Accept</button>
       <button id="decline-cookies" class="btn btn-secondary">Decline</button>
     </div>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.getElementsByClassName("close")[0];
+
+      document.querySelectorAll('.grid-item img').forEach(item => {
+        item.addEventListener('click', function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+          modalImg.style.width = 'auto';
+          modalImg.style.height = 'auto';
+        });
+      });
+
+      closeBtn.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
