@@ -999,3 +999,47 @@ blockquote {
     left: -100% !important;
   }
 }
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+  top: 5%;
+  margin: auto;
+  display: block;
+  max-width: 90%; /* Adjust as needed */
+  max-height: 90%; /* Adjust as needed */
+  width: auto; /* Allow width to adjust based on content */
+  height: auto; /* Allow height to adjust based on content */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.shadow-img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Faint shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.shadow-img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+.sae-fonts-style {
+  font-weight: 700; /* Bold */
+  font-size: 1.5rem;
+}
